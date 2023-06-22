@@ -15,11 +15,8 @@ import { InjectedConnector } from "wagmi/connectors/injected";
 import {
   ABI,
   API_KEY,
-  BACKUP_API_KEY,
   CUSTOM_QUOTE_CONTRACT,
   EIP712_QUOTE_CONTRACT,
-  LEGACY_712_CONTRACT,
-  LEGACY_CUSTOM_CONTRACT,
 } from "../const";
 import { ContractInterface, ethers } from "ethers";
 
@@ -93,12 +90,13 @@ export default function Home() {
     name: "TestContract",
     version: "1",
     verifyingContract: useContractAddress,
-    salt: ethers.utils.hexZeroPad((ethers.BigNumber.from(137)).toHexString(), 32),
+    salt: ethers.utils.hexZeroPad((ethers.BigNumber.from(80001)).toHexString(), 32),
   };
 
   useEffect(() => {
     const initBiconomy = async () => {
       setIsBiconomyInit(true);
+      console.log(provider)
       biconomy = new Biconomy(provider, {
         apiKey: API_KEY,
         debug: true,
