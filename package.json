@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@biconomy/mexa": "^3.0.5",
+    "@biconomy/mexa": "^2.0.39-beta.1",
     "@biconomy/mexaLocal": "/Users/notthatsundar/Biconomy/gasless/mexa-sdk",
     "@chakra-ui/react": "^2.5.5",
     "@emotion/react": "^11.10.6",
